@@ -19,9 +19,10 @@
         </div>
         <bot-list v-for='(bot, i) in botCollection'
             :key='i'
+            :index='i'
             :botObj='bot'
-            :deleteBot='() => deleteBot(i)'
-            :selectBot='() => selectBot(bot)'
+            :deleteBot='deleteBot'
+            :selectBot='selectBot'
         />
     </section>
   </div>

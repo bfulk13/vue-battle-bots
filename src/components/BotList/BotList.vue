@@ -5,8 +5,8 @@
                <p>{{botObj.botName}}</p>
                <p>Attack: {{botObj.attack}}</p>
                <p>Health: {{botObj.health}}</p>
-               <button @click='selectBot'>SELECT</button>
-               <button @click='deleteBot'>RETIRE</button>
+               <button @click='selectBot(botObj)'>SELECT</button>
+               <button @click='deleteBot(index)'>RETIRE</button>
            </div>
        </div>
     </div>
@@ -17,7 +17,7 @@
 
 
 export default {
-    props: ['botObj', 'deleteBot', 'selectBot']
+    props: ['botObj', 'deleteBot', 'selectBot', 'index']
 }
 </script>
 
